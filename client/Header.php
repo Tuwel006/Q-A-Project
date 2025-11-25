@@ -8,11 +8,25 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active bg-light text-primary rounded px-2 mx-1 fw-normal small" href="/">Home</a>
+          <a class="nav-link active bg-light text-primary rounded px-2 mx-1 fw-normal small" href="/Q-A-Project">Home</a>
         </li>
+        <?php
+        $page = $_GET['page'] ?? 'home';
+        if ($page === 'login' || $page === 'home' ) {
+        ?>
         <li class="nav-item">
-          <a class="nav-link text-muted rounded px-2 mx-1 fw-normal small" href="#">Login</a>
+          <a class="nav-link text-muted rounded px-2 mx-1 fw-normal small" href="?page=signup">Signup</a>
         </li>
+        <?php
+        }
+        if($page === 'signup' || $page === 'home') {
+        ?>
+        <li class="nav-item">
+          <a class="nav-link text-muted rounded px-2 mx-1 fw-normal small" href="?page=login">Login</a>
+        </li>
+        <?php
+        }
+        ?>
         <li class="nav-item">
           <a class="nav-link text-muted rounded px-2 mx-1 fw-normal small" href="#">Ask Question</a>
         </li>

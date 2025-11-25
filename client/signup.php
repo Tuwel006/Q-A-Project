@@ -20,7 +20,7 @@
                             <p class="text-muted small">Fill in the details to get started</p>
                         </div>
                         
-                        <form method="POST" action="">
+                        <form method="POST" action="./server/requests.php">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName" class="form-label text-dark">First Name</label>
@@ -62,11 +62,11 @@
                                 </div>
                             </div>
                             
-                            <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold mb-3">Create Account</button>
+                            <button type="submit" name="signup" class="btn btn-primary w-100 py-2 fw-semibold mb-3">Create Account</button>
                             
                             <div class="text-center">
                                 <span class="text-muted small">Already have an account? </span>
-                                <a href="login.php" class="text-primary text-decoration-none fw-semibold small">Sign In</a>
+                                <a href="?page=login" class="text-primary text-decoration-none fw-semibold small">Sign In</a>
                             </div>
                         </form>
                     </div>

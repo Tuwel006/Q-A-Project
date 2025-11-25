@@ -9,7 +9,14 @@
 <body>
     <?php 
     include './client/Header.php'; 
-    include './client/signup.php';
+    include './config/index.php';
+    $page = $_GET['page'] ?? '';
+    if($page === 'signup') {
+        include './client/signup.php';
+    }
+    else if($page === 'login') {
+        include './client/login.php';
+    }
     ?>
 </body>
 </html>
