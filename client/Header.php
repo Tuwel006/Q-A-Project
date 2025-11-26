@@ -1,3 +1,6 @@
+<?php
+$baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+?>
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm border-bottom w-100">
   <div class="container-fluid px-3">
     <a class="navbar-brand fw-semibold fs-5 text-dark" href="#">Q&A Hub</a>
@@ -8,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active bg-light text-primary rounded px-2 mx-1 fw-normal small" href="/Q-A-Project">Home</a>
+          <a class="nav-link active bg-light text-primary rounded px-2 mx-1 fw-normal small" href="<?php echo $baseUrl; ?>">Home</a>
         </li>
         <?php
         $page = $_GET['page'] ?? 'home';

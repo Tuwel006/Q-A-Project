@@ -18,5 +18,6 @@
         include './client/login.php';
     }
     ?>
+    This is Home page
 </body>
 </html>
